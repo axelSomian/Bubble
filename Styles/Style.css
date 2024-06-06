@@ -1,0 +1,213 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+}
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+header span{
+    color: #1576F3;
+}
+header .Right-header-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .Right-header-part nav{
+    font-weight: 40px;
+    font-size: 1rem;
+    margin-right: 30px;
+}
+header .Right-header-part nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+header .Right-header-part nav ul li{
+    margin-left:20px ;
+}
+header .Right-header-part nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px ;
+}
+header .Right-header-part img{
+    width: 70px;
+    height: 50px;
+}
+.active{
+    border-bottom: 3px solid #1576F3;
+}
+header .Right-header-part .BtnHamburger{
+    display: none;
+}
+header .Right-header-part .BtnHamburger span{
+    display: block;
+    margin-bottom: 2px;
+    border-radius: 30px;
+    background: #1576F3;
+    height: 5px;
+    width:30px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    header{
+        padding: 5px ;
+    }
+    header h1{
+        font-size: 0.8rem;
+    }
+    header .Right-header-part nav {
+        display: none;
+    }
+    header .Right-header-part img{
+        display: none;
+    }
+    header .Right-header-part .BtnHamburger{
+        display: block;
+    }
+}
+/* Responsive */
+
+
+
+
+/* Header */
+/* Main  */
+main{
+    width: 80%;
+    padding: 0px 50px;
+    margin: auto;
+}
+/*  Main*/
+
+/* Section search */
+#Search-section{
+    display: flex; 
+    justify-content: center;
+    padding: 20px;
+}
+#Search-section form input{
+
+    outline: none;
+    border: 1px solid lightgray;
+    width: 300px;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+#Search-section form input:hover{
+    padding: 15px 35px;
+  
+}
+::placeholder {
+    font-style: italic;
+    font-size: 1rem;
+}
+#Search-section form button{
+    background: #1576F3;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    padding: 10px 12px;
+    outline: none;
+    border: none;
+}
+
+@media screen and (max-width:800px) {
+    .Btn-search{
+        display: none;
+    }
+    #Search-section form input{
+        width: 200px;
+    }
+    ::placeholder {
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width:500px) {
+    #Search-section form input{
+        width: 130px;
+    }
+
+}
+/* Section-search */
+/* List-Residences */
+.list-residences{
+    display: flex;
+    /* padding: 80px; */
+    position: relative;
+    flex-wrap: wrap;
+    justify-content:space-between;
+
+}
+
+.list-residences .residence{
+    border-radius: 30px ;
+    transition: 0.2s;
+    padding: 20px 5px;
+    cursor: pointer;
+    position: relative;
+    width: 18%;
+    margin-bottom: 20px;
+}
+.list-residences .residence:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 
+     0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+}
+
+.list-residences .residence img{
+    width: 100%;
+    height: 198px;
+    border-radius: 30px;
+}
+.list-residences .residence .residence-info p{
+    margin: 2px;
+}
+@media screen and (max-width:1300px){
+    .list-residences .residence{
+        width: 22%;
+    }
+    .list-residences{
+        gap: 10px;
+        flex-wrap: 2;
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .list-residences .residence{
+        width: 30%;
+        
+    }
+    .list-residences .residence p{
+        font-size: 0.8rem;
+    }
+   
+}
+@media screen and (max-width:800px){
+    .list-residences .residence{
+        width: 45%;
+        
+    }
+} 
+@media screen and (max-width:525px){
+    .list-residences .residence{
+        width: 90%;
+        
+    }
+ 
+    .list-residences {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+} 
+
+/* List-Residences */
