@@ -1,0 +1,21 @@
+.Section-ViewMore {
+  width: 100%;
+  margin: auto;
+}
+.Section-ViewMore .Section-ViewMore-info .Section-ViewMore-img {
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+.Section-ViewMore .Section-ViewMore-info .Section-ViewMore-img img {
+  height: 50%;
+}
+.Section-ViewMore .Section-ViewMore-info .Section-ViewMore-img .ViewMore-OtherImg {
+  padding: 30px 30px;
+}
+.Section-ViewMore .Section-ViewMore-info .Section-ViewMore-img .ViewMore-OtherImg img {
+  width: 50%;
+  height: 200px;
+}
+
+/*# sourceMappingURL=view-more.css.map */
