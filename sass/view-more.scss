@@ -19,26 +19,74 @@ $font:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
 @mixin hoverShadow{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
-
+input,button{
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border:none
+}
 .Section-ViewMore{
-    width: 100%;
-    margin: auto;
-    .Section-ViewMore-info{
-        
-        .Section-ViewMore-img{
-            width: 100%;
-            height: 500px;
-            display: flex;
-            img{
-                height: 50%;
-            }
-            .ViewMore-OtherImg{
-                @include padding();
-                // grid-template-rows: 200px 200px;
-                img{
-                    width: 50%;
-                    height: 200px;
+    @include padding();
+    img{
+        width: 100%;
+        // height: 100%;
+    }
+    .Residence-imgs{
+        height: 450px;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .Residence-little-img{
+            margin-left: 10px;
+
+            height: 100%;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows:200px 200px ;
+        }
+    }
+    .Residence-info{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 32px;
+        }
+        .Equipements{
+            margin-top: 20px;
+            span{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                p{
+                    font-weight: 500;
+                    margin-left: 10px;
+                    color: gray;
                 }
+            }
+        }
+        .Form-Reserver{
+            .form{
+                display: flex;
+                flex-direction: column;
+                align-items: center ;
+                 -webkit-box-shadow: -4px 4px 89px -25px rgba(117,117,117,1);
+                -moz-box-shadow: -4px 4px 89px -25px rgba(117,117,117,1);
+                box-shadow: -4px 4px 89px -25px rgba(117,117,117,1);
+                @include padding();
+                *{
+                    margin-top: 10px;
+                }
+                button{
+                    background-color: #0ABAB5;
+                    color: white;
+                    font-size: 1.2rem;
+                }
+                input {
+                    border: 2px solid grey;
+                }
+
             }
         }
     }
