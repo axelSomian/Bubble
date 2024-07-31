@@ -26,14 +26,17 @@ main {
     padding: 0;
   }
 }
-
+.validation{
+  background-color: #0ABAB5;
+  color: white;
+}
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 30px 50px;
   border-bottom: 1px solid lightgray;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 header span {
   color: #0ABAB5;
