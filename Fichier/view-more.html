@@ -13,11 +13,44 @@
 
     </header> 
     <main>
+         <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Paiement</h2>
+                <form action="">
+                    <p>
+                        <label for="">Date d'arrivée</label>
+                        <input type="date" class="modalField">
+                    </p>
+                    <p>
+                        <label for="">Date de depart</label>
+                        <input type="date" class="modalField">
+                    </p>
+                    <p>
+                        <label for="">Nombre de personne    </label>
+                        <select class="modalField">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </p>
+                    <p>
+                        15 000 * 10 = 150 000fcfa
+                    </p>
+                    <p id="price">
+                        150 000
+                    </p>
+                    <button>Payer</button>
+                </form>
+            </div>
+        </div>
         <section class="Residence-info ">
             <div class="Residence-info-top Flex-Column underLinned">
                 <div class="Residence-name">
                     <h2>Residence Sunny</h2>
-                    <button class="validation"> Reserver </button>
+                    <button class="validation" id="openModalBtn"> Reserver </button>
                 </div>
                 <div class="Residence-principal-img">
                     <img src="../Assets/img-residence/12cb1312-f326-4279-bc0d-5669c6a9c7e9.webp" alt="">
@@ -71,7 +104,7 @@
                 </div>
             </div>
         </section>
-
+        <script src="view-more.js"></script>
     </main>
 </body>
 </html>

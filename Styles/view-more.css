@@ -5,6 +5,17 @@ input, button {
   border: none;
   font-size: 20px;
 }
+@media screen and (max-width: 700px) {
+  input, button {
+    padding: 5px 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  * {
+    font-size: 16px;
+  }
+}
 
 h3 {
   color: lightgrey;
@@ -35,10 +46,20 @@ img {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 700px) {
+  .Residence-info .Residence-info-top .Residence-name button {
+    font-size: 16px;
+  }
+}
 .Residence-info .Residence-info-top .Residence-principal-img {
-  width: 590px;
-  height: 375px;
+  width: 70%;
+  height: 50%;
   margin: auto;
+}
+@media screen and (max-width: 700px) {
+  .Residence-info .Residence-info-top .Residence-principal-img {
+    width: 100%;
+  }
 }
 .Residence-info .Residence-info-top .Residence-info-owner {
   margin-top: 15px;
@@ -57,6 +78,75 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
+}
+@media screen and (max-width: 700px) {
+  .Residence-photos .photo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5pxp;
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.modal-content p {
+  margin-top: 15px;
+}
+.modal-content button {
+  background-color: #0ABAB5;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalField {
+  border-radius: 30px;
+  padding: 5px 10px;
+  border: 2px solid gray;
+  display: block;
+}
+
+#price {
+  font-size: 1.2rem;
+  color: #0ABAB5;
 }
 
 /*# sourceMappingURL=view-more.css.map */
