@@ -54,6 +54,9 @@ img{
 .Residence-info{
 
     padding: 30px 70px;
+    @media screen and (max-width:700px){
+        padding: 10px 20px;
+    }
     .Residence-info-top{
        
 
@@ -97,6 +100,9 @@ img{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 50px;
+        @media screen and (max-width:1000px){
+            grid-template-columns: 1fr 1fr ;
+        }
         @media screen and (max-width:700px){
             display: flex;
             flex-direction: column;
@@ -136,8 +142,15 @@ img{
     p{
         margin-top: 15px;
     }
+    .btn{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
     button{
         background-color: $Primary-color;
+        padding: 10px 10px;
+        width: 150px;
     }
 }
 
@@ -160,6 +173,7 @@ img{
     padding: 5px 10px;
     border: 2px solid gray;
     display: block;
+    width: 200px;
 }
 #price{
     font-size: 1.2rem;

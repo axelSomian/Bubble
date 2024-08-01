@@ -42,6 +42,11 @@ img {
 .Residence-info {
   padding: 30px 70px;
 }
+@media screen and (max-width: 700px) {
+  .Residence-info {
+    padding: 10px 20px;
+  }
+}
 .Residence-info .Residence-info-top .Residence-name {
   justify-content: space-between;
   margin-bottom: 20px;
@@ -78,6 +83,11 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
+}
+@media screen and (max-width: 1000px) {
+  .Residence-photos .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 700px) {
   .Residence-photos .photo-grid {
@@ -118,8 +128,15 @@ img {
 .modal-content p {
   margin-top: 15px;
 }
+.modal-content .btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
 .modal-content button {
   background-color: #0ABAB5;
+  padding: 10px 10px;
+  width: 150px;
 }
 
 .close {
@@ -142,6 +159,7 @@ img {
   padding: 5px 10px;
   border: 2px solid gray;
   display: block;
+  width: 200px;
 }
 
 #price {
