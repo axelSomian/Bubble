@@ -23,108 +23,159 @@ input,button{
     outline: none;
     padding: 10px 20px;
     border-radius: 30px;
-    border:none
-}
-.divWithBorderTopAndDown{
-    border-bottom: 1px solid lightgray;
-
-}
-.Section-ViewMore{
-    @include padding();
-    img{
-        width: 100%;
-        height: 100%;
+    border:none;
+    font-size:20px;
+    @media screen and (max-width:700px) {
+                padding: 5px 5px;
     }
-    .Residence-imgs{
+}
+*{
+    @media screen and (max-width:700px) {
+        font-size: 16px;
+    }
+}
+h3{
+    color: lightgrey;
+}
+div{
+    display: flex;
+}
+.Flex-Column{
+    flex-direction: column;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.underLinned{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 12px;
+}
+.Residence-info{
 
-        height: 400px;
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-        margin-bottom: 30px;
-        @media screen and (max-width:700px) {
-            flex-direction: column;
-            overflow:visible;
-            margin-bottom: 70px;
-        }
-        .Residence-little-img{
-            margin-left: 10px;
-            height: 100%;
-            display: grid;
-            gap: 10px;
-            grid-template-columns: 1fr 1fr ;
-            // flex-direction: column;
+    padding: 30px 70px;
+    @media screen and (max-width:700px){
+        padding: 10px 20px;
+    }
+    .Residence-info-top{
+       
+
+        .Residence-name{
+            justify-content: space-between;
+            margin-bottom: 20px;
             @media screen and (max-width:700px) {
-                margin-left: 0px;
-               margin-top: 10px;
+                button{
+                    font-size: 16px;
+                }
             }
 
         }
-    }
-    .Residence-info{
-        display: flex;
-        flex: 3;
-        justify-content: space-between;
-        @media screen and (max-width:700px) {
-            flex-direction: column;
+        .Residence-principal-img{
+            width: 70%;
+            height: 50%;
+            margin: auto;
+            @media screen and (max-width:700px){
+                width: 100%;
+            }
         }
+        .Residence-info-owner{
+            margin-top:15px;
+        }
+    }
+}
+.Residences-equipements{
+    .Equipements{
+       div{
+        align-items: center;
+        margin-bottom: 2px;
+       }
         img{
             width: 32px;
-        }
-        .Equipements{
-            margin-top: 20px;
-            span{
-                display: flex;
-                align-items: center;
-                margin-bottom: 10px;
-                p{
-                    font-weight: 500;
-                    margin-left: 10px;
-                    color: gray;
-                }
-            }
-        }
-        .Form-Reserver{
-            .Form{
-                display: flex;
-                flex-direction: column;
-                align-items: center ;
-                 -webkit-box-shadow: -4px 4px 89px -25px rgba(117,117,117,1);
-                -moz-box-shadow: -4px 4px 89px -25px rgba(117,117,117,1);
-                box-shadow: -4px 4px 89px -25px rgba(117,117,117,1);
-                @include padding();
-                .Form-date{
-                    display: flex;
-
-                    align-items: center;
-                    justify-content: center;
-                    p{
-                        display: flex;
-                        flex-direction: column;
-                        border: 1px solid black;
-                        padding: 2px;
-                    }
-                    input{
-                        border: none;
-                        padding: 0;
-                    }
-                }                
-                *{
-                    margin-top: 10px;
-                }
-                button{
-                    background-color: #0ABAB5;
-                    color: white;
-                    font-size: 1.2rem;
-                }
-                input {
-                    border: 2px solid grey;
-                }
-
-            }
-            @media screen and (max-width:700px) {
-                padding: 10px 10px;
-            }
+            margin-right: 10px;
         }
     }
+}
+.Residence-photos {
+    .photo-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+        @media screen and (max-width:1000px){
+            grid-template-columns: 1fr 1fr ;
+        }
+        @media screen and (max-width:700px){
+            display: flex;
+            flex-direction: column;
+            gap: 5pxp;
+        }
+    }
+}
+
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    p{
+        margin-top: 15px;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+    button{
+        background-color: $Primary-color;
+        padding: 10px 10px;
+        width: 150px;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalField{
+    border-radius: 30px;
+    padding: 5px 10px;
+    border: 2px solid gray;
+    display: block;
+    width: 200px;
+}
+#price{
+    font-size: 1.2rem;
+    color: $Primary-color;
 }

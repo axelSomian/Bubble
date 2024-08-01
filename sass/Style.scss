@@ -90,3 +90,13 @@ header{
         }
     }
 }
+footer{
+     background-color: darken($color: $Primary-color, $amount: 20);
+     color: white;
+     h2{
+        @include FlexDiv();
+        justify-content: center;
+        font-size: 1.2rem;
+     }
+ 
+}

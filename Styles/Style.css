@@ -87,4 +87,16 @@ header .BtnHamburger span {
   }
 }
 
+footer {
+  background-color: #055957;
+  color: white;
+}
+footer h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
 /*# sourceMappingURL=Style.css.map */
