@@ -3,111 +3,168 @@ input, button {
   padding: 10px 20px;
   border-radius: 30px;
   border: none;
+  font-size: 20px;
+}
+@media screen and (max-width: 700px) {
+  input, button {
+    padding: 5px 5px;
+  }
 }
 
-.divWithBorderTopAndDown {
-  border-bottom: 1px solid lightgray;
+@media screen and (max-width: 700px) {
+  * {
+    font-size: 16px;
+  }
 }
 
-.Section-ViewMore {
-  padding: 30px 30px;
+h3 {
+  color: lightgrey;
 }
-.Section-ViewMore img {
+
+div {
+  display: flex;
+}
+
+.Flex-Column {
+  flex-direction: column;
+}
+
+img {
   width: 100%;
   height: 100%;
 }
-.Section-ViewMore .Residence-imgs {
-  height: 400px;
-  display: flex;
+
+.underLinned {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 12px;
+}
+
+.Residence-info {
+  padding: 30px 70px;
+}
+@media screen and (max-width: 700px) {
+  .Residence-info {
+    padding: 10px 20px;
+  }
+}
+.Residence-info .Residence-info-top .Residence-name {
   justify-content: space-between;
-  overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 700px) {
-  .Section-ViewMore .Residence-imgs {
-    flex-direction: column;
-    overflow: visible;
-    margin-bottom: 70px;
+  .Residence-info .Residence-info-top .Residence-name button {
+    font-size: 16px;
   }
 }
-.Section-ViewMore .Residence-imgs .Residence-little-img {
-  margin-left: 10px;
-  height: 100%;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr 1fr;
+.Residence-info .Residence-info-top .Residence-principal-img {
+  width: 70%;
+  height: 50%;
+  margin: auto;
 }
 @media screen and (max-width: 700px) {
-  .Section-ViewMore .Residence-imgs .Residence-little-img {
-    margin-left: 0px;
-    margin-top: 10px;
+  .Residence-info .Residence-info-top .Residence-principal-img {
+    width: 100%;
   }
 }
-.Section-ViewMore .Residence-info {
-  display: flex;
-  flex: 3;
-  justify-content: space-between;
+.Residence-info .Residence-info-top .Residence-info-owner {
+  margin-top: 15px;
 }
-@media screen and (max-width: 700px) {
-  .Section-ViewMore .Residence-info {
-    flex-direction: column;
-  }
+
+.Residences-equipements .Equipements div {
+  align-items: center;
+  margin-bottom: 2px;
 }
-.Section-ViewMore .Residence-info img {
+.Residences-equipements .Equipements img {
   width: 32px;
+  margin-right: 10px;
 }
-.Section-ViewMore .Residence-info .Equipements {
-  margin-top: 20px;
+
+.Residence-photos .photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
 }
-.Section-ViewMore .Residence-info .Equipements span {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.Section-ViewMore .Residence-info .Equipements span p {
-  font-weight: 500;
-  margin-left: 10px;
-  color: gray;
-}
-.Section-ViewMore .Residence-info .Form-Reserver .Form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  -webkit-box-shadow: -4px 4px 89px -25px rgb(117, 117, 117);
-  -moz-box-shadow: -4px 4px 89px -25px rgb(117, 117, 117);
-  box-shadow: -4px 4px 89px -25px rgb(117, 117, 117);
-  padding: 30px 30px;
-}
-.Section-ViewMore .Residence-info .Form-Reserver .Form .Form-date {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.Section-ViewMore .Residence-info .Form-Reserver .Form .Form-date p {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  padding: 2px;
-}
-.Section-ViewMore .Residence-info .Form-Reserver .Form .Form-date input {
-  border: none;
-  padding: 0;
-}
-.Section-ViewMore .Residence-info .Form-Reserver .Form * {
-  margin-top: 10px;
-}
-.Section-ViewMore .Residence-info .Form-Reserver .Form button {
-  background-color: #0ABAB5;
-  color: white;
-  font-size: 1.2rem;
-}
-.Section-ViewMore .Residence-info .Form-Reserver .Form input {
-  border: 2px solid grey;
+@media screen and (max-width: 1000px) {
+  .Residence-photos .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 700px) {
-  .Section-ViewMore .Residence-info .Form-Reserver {
-    padding: 10px 10px;
+  .Residence-photos .photo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5pxp;
   }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.modal-content p {
+  margin-top: 15px;
+}
+.modal-content .btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.modal-content button {
+  background-color: #0ABAB5;
+  padding: 10px 10px;
+  width: 150px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalField {
+  border-radius: 30px;
+  padding: 5px 10px;
+  border: 2px solid gray;
+  display: block;
+  width: 200px;
+}
+
+#price {
+  font-size: 1.2rem;
+  color: #0ABAB5;
 }
 
 /*# sourceMappingURL=view-more.css.map */

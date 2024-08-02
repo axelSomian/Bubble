@@ -11,73 +11,105 @@
     <header>
         <h1> <Span>B</Span>ubble </h1>
 
-        <div class="Right-header-part">
-            <nav>
-                <ul>
-                    <li> <a href="../index.html ">Residences</a></li></h1></h1>
-                    <li> <a href="" class="active">Véhicules</a></li></h1></h1>
-                </ul>
-            </nav>
-            <img src="../Assets/loginImg.webp" alt="">
-
-            <div class="BtnHamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
     </header> 
     <main>
-        <section class="Section-ViewMore">
-            <h3>{{Name}}</h3>
-                <div class="Residence-imgs">
-                    <img  src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
-                    <div class="Residence-little-img">
-                        <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="" class="limg">
-                        <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="" class="limg">
-                        <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="" class="limg">
-                        <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="" class="limg">
+         <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Paiement</h2>
+                <form action="">
+                    <p>
+                        <label for="">Date d'arrivée</label>
+                        <input type="date" class="modalField">
+                    </p>
+                    <p>
+                        <label for="">Date de depart</label>
+                        <input type="date" class="modalField">
+                    </p>
+                    <p>
+                        <label for="">Nombre de personne    </label>
+                        <select class="modalField" >
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </p>
+                    <p>
+                        15 000 * 10 = 150 000fcfa
+                    </p>
+                    <p id="price">
+                        150 000
+                    </p>
+                    <div class="btn">
+                        <button>Payer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <section class="Residence-info ">
+            <div class="Residence-info-top Flex-Column underLinned">
+                <div class="Residence-name">
+                    <h2>Residence Sunny</h2>
+                    <button class="validation" id="openModalBtn"> Reserver </button>
+                </div>
+                <div class="Residence-principal-img">
+                    <img src="../Assets/img-residence/12cb1312-f326-4279-bc0d-5669c6a9c7e9.webp" alt="">
+                </div>
+                <div class="Residence-info-owner ">
+                    <div class="Flex-Column">
+                        <p>15 000Fcfa /Nuit</p>
+                        <p>Hôte :Axel</p>
                     </div>
                 </div>
-
-                <div class="Residence-info">
-                    <div class="Residence-equipements">
-                        <div class="info-hote divWithBorderTopAndDown">
-                            <h3>Hôte</h3>
-                            <p>Axel Somian</p>
-                            <p>Hôte depuis 2022</p>
-                            <p> Assinie,Assouindé    </p>
-                        </div>
-                        <div class="Equipements divWithBorderTopAndDown" >
-                            <h3>Equipements</h3>
-                            <span> 
-                                <img src="../Assets/icones/chambre1.png"  alt="">
-                                <p>: 2 chambre</p> 
-                            </span>
-                            <span> 
-                                <img src="../Assets/icones/salle-de-bains.png"  alt="">
-                                <p>: 2 Salle bains </p> 
-                            </span>
-                            <span> 
-                                <img src="../Assets/icones/wifi.png"  alt="">
-                                <p>: Wifi disponible</p> 
-                            </span>
-          
-                        </div>
+            </div>
+            <div class="Residences-equipements underLinned">
+                <div class="Equipements Flex-Column">
+                    <h3>EQUIPEMENTS</h3>
+                    <div>
+                        <img src="../Assets/icones/chambre.png" alt="">
+                        <p>: 2 Chambres</p>
                     </div>
-                    <div class="Form-Reserver">
-                        <div class="Form">
-                            <p>15 000 fcfa/Nuit</p>
-                            <div class="Form-date">
-                                <p>date de debut <input type="date"></p>
-                                <p>date de depart <input type="date" placeholder="date"></p>
-                            </div>
-                            <p>Total: 150 000f </p>
-                            <button>Reserver</button>
-                        </div>
+                    <div>
+                        <img src="../Assets/icones/salle-de-bains.png" alt="">
+                        <p>: 2 Salles de bains</p>
+                    </div>
+                    <div>
+                        <img src="../Assets/icones/wifi.png" alt="">
+                        <p>: Disponiblex</p>
+                    </div>
+                    <div>
+                        <img src="../Assets/icones/salle-de-bains.png" alt="">
+                        <p>: 2 Salles de bains</p>
+                    </div>
+                    <div>
+                        <img src="../Assets/icones/wifi.png" alt="">
+                        <p>: Disponiblex</p>
                     </div>
                 </div>
+            </div>
+            <div class="Residence-photos Flex-Column">
+                <h3>PHOTOS</h3>
+                <div class="photo-grid">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                    <img src="../Assets/img-residence/0d6dc903-ee2c-478c-aa10-87710c41be55.webp" alt="">
+                </div>
+            </div>
         </section>
+        <script src="view-more.js"></script>
     </main>
+    <footer>
+        <h2>By CoderGroups</h2>
+    </footer>
 </body>
 </html>
